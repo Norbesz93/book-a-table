@@ -8,7 +8,7 @@
 
 #logo{
     position: relative;
-    width: 200px;
+    width: 400px;
     left: 50%;
     transform: translateX(-50%); 
 }
@@ -20,7 +20,7 @@
 }
 
 #text{
-    padding: 50px;
+    padding: 60px;
     font-size: 20px;
 }
 
