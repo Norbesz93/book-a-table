@@ -31,26 +31,35 @@ const menu = {
 
 const App = () => {
 
+    const currentDay = new Date()
+    const timeMinusOneH = currentDay.getHours() -1 + ":" + currentDay.getMinutes()
+
+    const today = new Date().toISOString().split("T")[0];
+
     const [myBool, setMyBool] = React.useState(false)
     function goToMenu() {
         setMyBool(true)
     }
     
+    const [myBookingPage, setMyBookingPage ] = React.useState(false)
+    function goToBookingPage() {
+        setMyBookingPage(true)
+    }
+
     return (
         <div> 
 
-            {myBool 
-
-            ? 
+            {myBool ? 
 
             <div id="menupage">
+                <img id="logo" src="/nypizzalogo.svg" alt="ny pizza logo" />
                 <p id="text">
+                    About us: <br />
                     New York Pizza is an American multinational restaurant chain and international franchise founded in 1958 in Wichita, Kansas by Dan and Frank Carney. It provides pizza and other Italian-American pizza, including pizza, fancy mineral water like perrier and pizza.
                     The chain has 2 restaurants worldwide as of December 31, 2019, making it the world's largest pizza chain in the number of locations.
                     It is a subsidiary of Yum! Brands, Inc., one of the world's largest restaurant companies.
                 </p>
                 <div id="menu">
-
                     <div>
                         {menu.pizzas.map(pizza =>
                             <div key={pizza.pizza} className="pizzasshown"><img className="contentphoto" src={pizza.photo} /> <div className="pizzatype"> {pizza.pizza} </div> <div className="pizzaprice"> {pizza.price} </div> </div>)}
@@ -62,13 +71,29 @@ const App = () => {
                 </div>
             </div>
             
-            :
+            : myBookingPage ?
 
-            <div id="landingpage">
+            <div id="reservationtab">
+                <form>
+                    <label for="email">Enter your email:</label>
+                    <input type="email" id="email" name="email"/>
+            
+                    <label for="date">Date:</label>
+                    <input type="date" min={today} id="dt" />
+
+                    <label for="appt">Select a time:</label>
+                    <input type="time" min={timeMinusOneH} id="appt" name="appt"/> 
+
+                    <input type="submit"/>
+                </form>
+            </div>
+            
+            
+            : <div id="landingpage">
                 
                 <img id="logo" src="/nypizzalogo.svg" alt="ny pizza logo" /> 
-                <button onClick={goToMenu} className="buttons" id="menubtn" >Menu</button>
-                <button className="buttons" id="bookingbtn">Booking</button> 
+                <a onClick={goToMenu} className="fancy-btn" id="menubtn"> Menu</a>
+                <a onClick={goToBookingPage} className="fancy-btn" id="bookingbtn">Booking</a> 
             </div> 
             
             }
