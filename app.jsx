@@ -46,6 +46,11 @@ const App = () => {
         setMyBookingPage(true)
     }
 
+    const [myResConfirmed, setMyResConfirmed] = React.useState(false)
+    function goToResConfirmed() {
+        setMyResConfirmed(true)
+    }
+
     return (
         <div> 
 
@@ -74,7 +79,10 @@ const App = () => {
             : myBookingPage ?
 
             <div id="reservationtab">
+                <img id="logo" src="/nypizzalogo.svg" alt="ny pizza logo" />
+
                 <form>
+                    
                     <label for="email">Enter your email:</label>
                     <input type="email" id="email" name="email"/>
             
@@ -84,10 +92,35 @@ const App = () => {
                     <label for="appt">Select a time:</label>
                     <input type="time" min={timeMinusOneH} id="appt" name="appt"/> 
 
-                    <input type="submit"/>
+                    <select name="seats" id="seats">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <input onClick={goToResConfirmed} id="reservationbtn" type="submit"/>
                 </form>
             </div>
-            
+
+            : myResConfirmed ?
+
+            <div id="reservationconfirmed">
+                <img id="logo" src="/nypizzalogo.svg" alt="ny pizza logo" />
+
+                <form>
+                    <p>Your booking is confirmed as below:</p>
+
+                    <p>Date:</p>
+
+                    <p>Time:</p>
+
+                    <p>Guests:</p>
+                
+                    <button>Go back</button>
+                </form>
+            </div>
             
             : <div id="landingpage">
                 
