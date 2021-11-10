@@ -1,19 +1,19 @@
 const menu = {
     pizzas: [
-        { pizza: "Margarita", price: 2000, photo: "/margarita.jpeg" },
-        { pizza: "Dolce Vita", price: 2000, photo: "/dolce.jpeg" },
-        { pizza: "Funghi", price: 2000, photo: "/funghi.jpeg" },
-        { pizza: "Marinara", price: 2000, photo: "/margarita.jpeg" },
-        { pizza: "Chilli", price: 2000, photo: "/chilli.jpeg" },
-        { pizza: "Fitness", price: 2000, photo: "/fitness.jpeg" }
+        { pizza: "THE WICKER MAN", price: 3000, description: "Tomato, mozzarella, cobble lane nduja & pepperoni, mascarpone & scotch bonnet chilli honey" },
+        { pizza: "TOP BOY", price: 3000, description: "Tomato, artichoke, caramelised onions, olives, garlic & thyme mushrooms, walnuts & truffle oil" },
+        { pizza: "BLUE ART", price: 3000, description: "Tomato, mozzarella, gorgonzola, artichokes & olives"},
+        { pizza: "DIRTY BIRDIE", price: 3000, description: "Tomato, mozzarella, caramelised onions, garlic & thyme mushrooms & smoked pancetta" },
+        { pizza: "LORENA", price: 3000, description: "Tomato, mozzarella, butternut squash, feta, pine nuts & rosemary" },
+        { pizza: "JON BON CHOVY", price: 3333, description: "Tomato, mozzarella, anchovies, capers, olives, chillies & fresh parsley" }
     ],
     drinks: [
         { drink: "Coke 0,5l", price: 1000, photo: "coke.png" },
-        { drink: "Coke 1,5l", price: 1000, photo: "fanta.png" },
+        { drink: "Coke 1,5l", price: 1500, photo: "fanta.png" },
         { drink: "Sprite 0,5l", price: 1000, photo: "sprite.png" },
         { drink: "Water 0,5l", price: 1000, photo: "water.png" },
-        { drink: "Beer 0,5l", price: 1000, photo: "beer.png" },
-        { drink: "Dreher 0,5l", price: 1000, photo: "powerade.png" }
+        { drink: "Beer 0,5l", price: 2000, photo: "beer.png" },
+        { drink: "Dreher 0,5l", price: 2000, photo: "powerade.png" }
     ]
 }
 
@@ -85,7 +85,7 @@ const App = () => {
                 <div id="menu">
                     <div>
                         {menu.pizzas.map(pizza =>
-                            <div key={pizza.pizza} className="pizzasshown"><img className="contentphoto" src={pizza.photo} /> <div className="pizzatype"> {pizza.pizza} </div> <div className="pizzaprice"> {pizza.price} </div> </div>)}
+                            <div key={pizza.pizza} className="pizzasshown">  <div className="pizzatype"> {pizza.pizza} </div> ◈ <div className="pizzadescription"> {pizza.description} </div> ◈ <div className="pizzaprice"> {pizza.price} </div> </div>)}
                     </div>
 
                     <div>
