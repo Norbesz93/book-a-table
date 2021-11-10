@@ -8,12 +8,12 @@ const menu = {
         { pizza: "Fitness", price: 2000, photo: "/fitness.jpeg" }
     ],
     drinks: [
-        { drink: "Coke", price: 1000, photo: "coke.png" },
-        { drink: "Sprite", price: 1000, photo: "sprite.png" },
-        { drink: "Volvic", price: 1000, photo: "volvic.png" },
-        { drink: "San Benedetto", price: 1000, photo: "sanbenedetto.png" },
-        { drink: "Perrier", price: 1000, photo: "perrier.png" },
-        { drink: "Evian", price: 1000, photo: "evian.png" }
+        { drink: "Coke 0,5l", price: 1000, photo: "coke.png" },
+        { drink: "Coke 1,5l", price: 1000, photo: "fanta.png" },
+        { drink: "Sprite 0,5l", price: 1000, photo: "sprite.png" },
+        { drink: "Water 0,5l", price: 1000, photo: "water.png" },
+        { drink: "Beer 0,5l", price: 1000, photo: "beer.png" },
+        { drink: "Dreher 0,5l", price: 1000, photo: "powerade.png" }
     ]
 }
 
