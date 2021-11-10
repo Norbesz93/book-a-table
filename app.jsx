@@ -31,8 +31,13 @@ const menu = {
 
 const App = () => {
 
+    const [email, setEmail] = React.useState("Enter your email!")
+    const [date, setDate] = React.useState("")
+    const [time, setTime] = React.useState("")
+    const [guest, setGuest] = React.useState(1)
+
     const currentDay = new Date()
-    const timeMinusOneH = currentDay.getHours() -1 + ":" + currentDay.getMinutes()
+    const timePlusOneH = currentDay.getHours() +1 + ":" + currentDay.getMinutes()
 
     const today = new Date().toISOString().split("T")[0];
 
@@ -46,9 +51,22 @@ const App = () => {
         setMyBookingPage(true)
     }
 
+    function menuToBooking(){
+        setMyBool(false)
+        setMyBookingPage(true)
+    }
+
+    function goBack(){
+        setMyResConfirmed(false)
+        setMyBookingPage(true)
+    }
+
     const [myResConfirmed, setMyResConfirmed] = React.useState(false)
     function goToResConfirmed() {
+        if(email.includes("@") && (date == currentDay && timePlusOneH <= time || date != today)) {
+        setMyBookingPage(false)
         setMyResConfirmed(true)
+        }
     }
 
     return (
@@ -74,25 +92,26 @@ const App = () => {
                         {menu.drinks.map(drink => <div key={drink.drink} className="drinksshown"> <img className="contentphoto" src={drink.photo} /> <div className="drinktype"> {drink.drink} </div> <div className="drinkprice"> {drink.price} </div> </div>)}
                     </div>
                 </div>
+            <a onClick={menuToBooking} className="fancy-btn">Booking</a> 
             </div>
             
             : myBookingPage ?
 
-            <div id="reservationtab">
+            <div className="reservationtab">
                 <img id="logo" src="/nypizzalogo.svg" alt="ny pizza logo" />
 
                 <form>
                     
                     <label for="email">Enter your email:</label>
-                    <input type="email" id="email" name="email"/>
+                    <input onChange={(e) => setEmail(e.target.value)} type="email" id="email" name="email" value={email}/>
             
                     <label for="date">Date:</label>
-                    <input type="date" min={today} id="dt" />
+                    <input onChange={(e) => setDate(e.target.value)} type="date" min={today} id="dt" value={date}/>
 
                     <label for="appt">Select a time:</label>
-                    <input type="time" min={timeMinusOneH} id="appt" name="appt"/> 
+                    <input onChange={(e) => setTime(e.target.value)} type="time" value={time} min={timePlusOneH} id="appt" name="appt"/> 
 
-                    <select name="seats" id="seats">
+                    <select onChange={(e) => setGuest(e.target.value)} name="seats" id="seats" value={guest}>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -100,25 +119,28 @@ const App = () => {
                         <option value="5">5</option>
                     </select>
 
-                    <input onClick={goToResConfirmed} id="reservationbtn" type="submit"/>
+                    <input onClick={goToResConfirmed} className="reservationbtn" type="submit"/>
                 </form>
             </div>
 
             : myResConfirmed ?
 
-            <div id="reservationconfirmed">
+            <div className="reservationtab">
                 <img id="logo" src="/nypizzalogo.svg" alt="ny pizza logo" />
 
                 <form>
                     <p>Your booking is confirmed as below:</p>
 
-                    <p>Date:</p>
+                    <p>Contact: {email}</p>
 
-                    <p>Time:</p>
+                    <p>Date: {date}</p>
 
-                    <p>Guests:</p>
+                    <p>Time: {time}</p>
+
+                    <p>Guests: {guest}</p>
                 
-                    <button>Go back</button>
+                    <button onClick={goBack} className="reservationbtn">Go back!</button>
+                    <button className="reservationbtn">Comfirm!</button>
                 </form>
             </div>
             
