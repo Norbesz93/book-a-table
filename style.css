@@ -95,6 +95,11 @@ form {
     justify-content: space-around;
 }
 
+.pizzasshown:hover {
+    background: wheat;
+    color:rgba(0, 130, 90);
+  }
+
 .pizzatype{
     text-align: center;
 }
@@ -107,6 +112,11 @@ form {
     margin: 10px;
     border-radius: 5px;
     background: rgba(0, 120, 90, 0.8);
+}
+
+.drinksshown:hover {
+    background: wheat;
+    color:rgba(0, 130, 90);
 }
 
 .drinktype{
