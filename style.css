@@ -19,15 +19,7 @@ body{
     background-size: cover;
 }
 
- #menupage {
-    background-image: url("/bacgroundmenu.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    color:wheat;
-    font-family: 'EB Garamond', serif;
-} 
+ 
 
 #logo{
     position: relative;
@@ -80,53 +72,6 @@ form {
 
 }
 
-.pizzasshown{
-    margin: 10px;
-    padding: 30px;
-    border-radius: 5px;
-    background: rgba(0, 120, 90, 0.8);
-    width: 280px;
-    height: 240px;
-
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.pizzasshown:hover {
-    background: wheat;
-    color:rgba(0, 130, 90);
-  }
-
-.pizzatype{
-    text-align: center;
-}
-
-.pizzaprice{
-    text-align: center
-}
-
-.drinksshown{
-    margin: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    background: rgba(0, 120, 90, 0.8);
-}
-
-.drinksshown:hover {
-    background: wheat;
-    color:rgba(0, 130, 90);
-  }
-
-.drinktype{
-    text-align: center;
-}
-
-.drinkprice{
-    text-align: center
-}
 
 .reservationbtn {
     display:inline-block;
@@ -160,9 +105,77 @@ form {
 
 /* Menu page */
 
+#menupage {
+    background-image: url("/bacgroundmenu.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    color:wheat;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 2px;
+} 
+
 #menu {
     display: flex;
     flex-wrap: wrap;
+}
+
+/* #text{
+    font-family: 'Dancing Script', cursive;
+} */
+
+
+.pizzasshown{
+    margin: 10px;
+    padding: 30px;
+    border-radius: 5px;
+    background: rgba(0, 120, 90, 0.8);
+    width: 280px;
+    height: 240px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pizzasshown:hover {
+    background: wheat;
+    color:rgba(0, 130, 90);
+  }
+
+.pizzatype{
+    text-align: center;
+}
+
+.pizzaprice{
+    text-align: center
+}
+
+.pizzadescription {
+    text-align: center;
+}
+
+.drinksshown{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(0, 120, 90, 0.8);
+}
+
+.drinksshown:hover {
+    background: wheat;
+    color:rgba(0, 130, 90);
+  }
+
+.drinktype{
+    text-align: center;
+}
+
+.drinkprice{
+    text-align: center
 }
 
 .contentphoto {
