@@ -51,6 +51,11 @@ const App = () => {
         setMyBookingPage(true)
     }
 
+    function bookingToMenu() {
+        setMyBookingPage(false)
+        setMyBool(true)
+    }
+
     function menuToBooking(){
         setMyBool(false)
         setMyBookingPage(true)
@@ -121,6 +126,7 @@ const App = () => {
 
                     <input onClick={goToResConfirmed} className="reservationbtn" type="submit"/>
                 </form>
+                <a onClick={bookingToMenu} id="bookingToMenuBtn" className="fancy-btn">Menu</a> 
             </div>
 
             : myResConfirmed ?

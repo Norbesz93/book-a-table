@@ -45,10 +45,13 @@ body{
 /* booking page */
 
 .reservationtab {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-image: url("/bookingbackground.png");
+    background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 form {
@@ -103,6 +106,7 @@ form {
     text-shadow: 2px 2px red;
 }
 
+
 /* Menu page */
 
 #menupage {
@@ -114,6 +118,7 @@ form {
     color:wheat;
     font-family: 'EB Garamond', serif;
     letter-spacing: 2px;
+    width: 100%;
 } 
 
 #menu {
@@ -259,6 +264,11 @@ form {
 }
 
 @media screen and (max-width: 500px) {
+    form{
+    font-size: 25px;
+    height: 400px;
+    width: 350px;
+    }
     #logo{
         width: 300px;
     
@@ -283,6 +293,13 @@ form {
 }
 
 @media screen and (max-width: 380px) {
+    
+    form{
+        font-size: 18px;
+        height: 350px;
+        width: 250px;
+        }
+
     #logo{
         width: 250px;
     
