@@ -35,14 +35,12 @@ body{
 
 }
 
-/* #menubtn {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-} */
 
 /* booking page */
+
+#restab{
+    height: 100vh;
+}
 
 .reservationtab {
     height: 100%;

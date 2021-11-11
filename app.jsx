@@ -17,18 +17,6 @@ const menu = {
     ]
 }
 
-// const booking = () => {
-//     return (
-//         <div id="reservation">
-//             <input type="Enter your email" />
-//             <select name="date" id="date">Date</select>
-//             <select name="time" id="time">Time</select>
-//             <select name="guests" id="guests">Guests</select>
-//             <button id="proceed">Book Now</button>
-//         </div>
-//     )
-// }
-
 const App = () => {
 
     const [email, setEmail] = React.useState("Enter your email!")
@@ -42,20 +30,21 @@ const App = () => {
     const today = new Date().toISOString().split("T")[0];
 
     const [myBool, setMyBool] = React.useState(false)
-    function goToMenu() {
-        setMyBool(true)
-    }
-    
+    const [myResConfirmed, setMyResConfirmed] = React.useState(false)
     const [myBookingPage, setMyBookingPage ] = React.useState(false)
+
     function goToBookingPage() {
         setMyBookingPage(true)
     }
-
+    
     function bookingToMenu() {
         setMyBookingPage(false)
         setMyBool(true)
     }
-
+    
+    function goToMenu() {
+    setMyBool(true)
+}
     function menuToBooking(){
         setMyBool(false)
         setMyBookingPage(true)
@@ -66,9 +55,8 @@ const App = () => {
         setMyBookingPage(true)
     }
 
-    const [myResConfirmed, setMyResConfirmed] = React.useState(false)
     function goToResConfirmed() {
-        if(email.includes("@") && (date == currentDay && timePlusOneH <= time || date != today)) {
+        if(email.includes("@") && (date == today && timePlusOneH < time || date != today)) {
         setMyBookingPage(false)
         setMyResConfirmed(true)
         }
@@ -108,7 +96,7 @@ const App = () => {
                 <form>
                     
                     <label for="email">Enter your email:</label>
-                    <input onChange={(e) => setEmail(e.target.value)} type="email" id="email" name="email" value={email}/>
+                    <input onClick={() => setEmail("")} onChange={(e) => setEmail(e.target.value)} type="email" id="email" name="email" value={email}/>
             
                     <label for="date">Date:</label>
                     <input onChange={(e) => setDate(e.target.value)} type="date" min={today} id="dt" value={date}/>
@@ -131,7 +119,7 @@ const App = () => {
 
             : myResConfirmed ?
 
-            <div className="reservationtab">
+            <div className="reservationtab" id="restab">
                 <img id="logo" src="/nypizzalogo.svg" alt="ny pizza logo" />
 
                 <form>
