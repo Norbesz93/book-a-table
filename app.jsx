@@ -1,19 +1,19 @@
 const menu = {
     pizzas: [
-        { pizza: "THE WICKER MAN", price: 3000, description: "Tomato, mozzarella, cobble lane nduja & pepperoni, mascarpone & scotch bonnet chilli honey" },
-        { pizza: "TOP BOY", price: 3000, description: "Tomato, artichoke, caramelised onions, olives, garlic & thyme mushrooms, walnuts & truffle oil" },
-        { pizza: "BLUE ART", price: 3000, description: "Tomato, mozzarella, gorgonzola, artichokes & olives"},
-        { pizza: "DIRTY BIRDIE", price: 3000, description: "Tomato, mozzarella, caramelised onions, garlic & thyme mushrooms & smoked pancetta" },
-        { pizza: "LORENA", price: 3000, description: "Tomato, mozzarella, butternut squash, feta, pine nuts & rosemary" },
-        { pizza: "JON BON CHOVY", price: 3333, description: "Tomato, mozzarella, anchovies, capers, olives, chillies & fresh parsley" }
+        { pizza: "THE WICKER MAN", price: 17, description: "Tomato, mozzarella, cobble lane nduja & pepperoni, mascarpone & scotch bonnet chilli honey" },
+        { pizza: "TOP BOY", price: 20, description: "Tomato, artichoke, caramelised onions, olives, garlic & thyme mushrooms, walnuts & truffle oil" },
+        { pizza: "BLUE ART", price: 16, description: "Tomato, mozzarella, gorgonzola, artichokes & olives"},
+        { pizza: "DIRTY BIRDIE", price: 22, description: "Tomato, mozzarella, caramelised onions, garlic & thyme mushrooms & smoked pancetta" },
+        { pizza: "LORENA", price: 21, description: "Tomato, mozzarella, butternut squash, feta, pine nuts & rosemary" },
+        { pizza: "JON BON CHOVY", price: 20, description: "Tomato, mozzarella, anchovies, capers, olives, chillies & fresh parsley" }
     ],
     drinks: [
-        { drink: "Coke 0,5l", price: 1000, photo: "coke.png" },
-        { drink: "Coke 1,5l", price: 1500, photo: "fanta.png" },
-        { drink: "Sprite 0,5l", price: 1000, photo: "sprite.png" },
-        { drink: "Water 0,5l", price: 1000, photo: "water.png" },
-        { drink: "Beer 0,5l", price: 2000, photo: "beer.png" },
-        { drink: "Dreher 0,5l", price: 2000, photo: "powerade.png" }
+        { drink: "Coke 0,5l", price: 8, photo: "coke.png" },
+        { drink: "Coke 1,5l", price: 10, photo: "fanta.png" },
+        { drink: "Sprite 0,5l", price: 8, photo: "sprite.png" },
+        { drink: "Water 0,5l", price: 10, photo: "water.png" },
+        { drink: "Beer 0,5l", price: 12, photo: "beer.png" },
+        { drink: "Dreher 0,5l", price: 12, photo: "powerade.png" }
     ]
 }
 
