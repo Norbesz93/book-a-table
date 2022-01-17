@@ -48,7 +48,7 @@ body{
     background-image: url("/bookingbackground.png");
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 
 }
 

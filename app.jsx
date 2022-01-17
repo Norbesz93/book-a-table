@@ -44,7 +44,8 @@ const App = () => {
     
     function goToMenu() {
     setMyBool(true)
-}
+    }
+
     function menuToBooking(){
         setMyBool(false)
         setMyBookingPage(true)
@@ -54,7 +55,7 @@ const App = () => {
         setMyResConfirmed(false)
         setMyBookingPage(true)
     }
-
+    
     function goToResConfirmed() {
         if(email.includes("@") && (date == today && timePlusOneH < time || date != today)) {
         setMyBookingPage(false)
